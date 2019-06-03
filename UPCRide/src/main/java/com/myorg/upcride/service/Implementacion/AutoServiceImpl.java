@@ -4,9 +4,10 @@ import com.myorg.upcride.model.Auto;
 import com.myorg.upcride.repository.AutoRepository;
 import com.myorg.upcride.service.AutoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class AutoServiceImpl implements AutoService {
 
     AutoRepository autoRepository;

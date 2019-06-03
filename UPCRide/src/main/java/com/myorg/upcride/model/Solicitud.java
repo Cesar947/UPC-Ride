@@ -1,46 +1,53 @@
 package com.myorg.upcride.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+//import javax.persistence.Column;
+//import javax.persistence.Entity;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
+//import javax.persistence.Id;
+//import javax.persistence.JoinColumn;
+//import javax.persistence.ManyToOne;
+//import javax.persistence.Table;
 
 /**
  *
  * @author slayz
  */
 
-@Entity
-@Table(name = "solicitud")
-public class Solicitud implements Serializable {
+/*@Entity
+@Table(name = "solicitud")*/
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Solicitud {//implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+   // private static final long serialVersionUID = 1L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   /* @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)*/
     private int codigoSolicitud;
 
-    @ManyToOne
-    @JoinColumn(name = "codigoCliente")
+   /* @ManyToOne
+    @JoinColumn(name = "codigoCliente")*/
     private Usuario codigoCliente;
 
-    @ManyToOne
-    @JoinColumn(name ="codigoViaje")
+    /*@ManyToOne
+    @JoinColumn(name ="codigoViaje")*/
     private Viaje codigoViaje;
 
-    @Column(name = "mensajeSolicitud", length = 120, nullable = true)
+ /*   @Column(name = "mensajeSolicitud", length = 120, nullable = true)*/
     private String mensaje;
 
-    @Column(name="confirmacionConductor", length = 9, nullable = true)
+ //   @Column(name="confirmacionConductor", length = 9, nullable = true)
     private boolean confirmacionConductor;
 
 
-    @Column(name="puntoRecojo", length = 30, nullable = true)
+   // @Column(name="puntoRecojo", length = 30, nullable = true)
     private String puntoRecojo;
 
     public int getCodigoSolicitud() {

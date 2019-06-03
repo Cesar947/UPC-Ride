@@ -1,57 +1,65 @@
 package com.myorg.upcride.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
+//
+//import javax.persistence.Column;
+//import javax.persistence.Entity;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
+//import javax.persistence.Id;
+//import javax.persistence.JoinColumn;
+//import javax.persistence.ManyToOne;
+//import javax.persistence.Table;
+//@Entity
+//@Table (name= "usuario")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Usuario{// implements Serializable {
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-@Entity
-@Table (name= "usuario")
-public class Usuario implements Serializable {
+  //  private static final long serialVersionUID = 1L;
 
-    private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String codigoUsuario;
 
-    @Column(name = "email", length = 50, nullable = false)
+   // @Column(name = "email", length = 50, nullable = false)
     private String email;
 
-    @Column(name = "contrasena", length = 40, nullable = false)
+   // @Column(name = "contrasena", length = 40, nullable = false)
     private String contrasena;
 
-    @Column(name = "nombres", length = 60, nullable = false)
+   // @Column(name = "nombres", length = 60, nullable = false)
     private String nombres;
 
-    @Column(name = "apellidos", length = 60, nullable = true)
+   // @Column(name = "apellidos", length = 60, nullable = true)
     private String apellidos;
 
-    @Column(name = "ubicacion", length = 100, nullable = false)
+   // @Column(name = "ubicacion", length = 100, nullable = false)
     private String ubicacion;
 
-    @Column(name = "facebookID", length = 60, nullable = true)
+ //   @Column(name = "facebookID", length = 60, nullable = true)
     private String facebookID;
 
-    @Column(name = "telefono", length = 25, nullable = false)
+   // @Column(name = "telefono", length = 25, nullable = false)
     private String telefono;
 
-    @ManyToOne
-    @JoinColumn(name = "codigoDistrito")
+  //  @ManyToOne
+   // @JoinColumn(name = "codigoDistrito")
     private String distrito;
 
-    @Column(name = "rol")
+    //@Column(name = "rol")
     private int rol;
 
-    @Column(name = "licenciaConducir", length = 9, nullable = true)
+   // @Column(name = "licenciaConducir", length = 9, nullable = true)
     private String licenciaConducir;
 
-    @Column(name="sede", length = 20, nullable= false)
+   // @Column(name="sede", length = 20, nullable= false)
+    private String sede;
 
 
     public String getCodigoUsuario() {

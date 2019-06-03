@@ -1,22 +1,27 @@
 package com.myorg.upcride.model;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+//import javax.persistence.Column;
+//import javax.persistence.Embeddable;
+//import javax.persistence.JoinColumn;
+//import javax.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Objects;
 
-@Embeddable
+//@Embeddable
+
 public class ItinerarioId {
 
-    @Column (name="hora", length = 50, nullable = false)
+    //@Column (name="hora", length = 50, nullable = false)
     private String hora;
 
-    @Column (name="dia", length = 50 , nullable = false )
+    //@Column (name="dia", length = 50 , nullable = false )
     private String dia;
 
-    @ManyToOne
-    @JoinColumn(name = "codigoUsuario")
+    //@ManyToOne
+    //@JoinColumn(name = "codigoUsuario")
     private Usuario codigoUsuario;
 
     public String getHora() {
